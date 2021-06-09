@@ -2,7 +2,7 @@
 
 ## CI Pipeline Examples
 
-### PRE-REQS: All of the CI examples rely on an existing DockerHub repo that you control and have the ability to push the container images being built. This repo should exist before getting started. This repo value will be used in the `CONTAINER_REPO` variable throughout the examples. You will also need a personal access token to be used for the DockerHub password in all pipelines.
+#### PRE-REQS: All of the CI examples rely on an existing DockerHub repo that you control and have the ability to push the container images being built. This repo should exist before getting started. This repo value will be used in the `CONTAINER_REPO` variable throughout the examples. You will also need a personal access token to be used for the DockerHub password in all pipelines.
 
 The pipeline example can use the Dockerfile inside this directory for build purposes.
 
