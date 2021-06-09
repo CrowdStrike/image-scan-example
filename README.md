@@ -14,11 +14,9 @@ These pipeline examples were built to showcase the `docker build` with a subsequ
 
 ## Jenkins Pipeline
 
-### Requirements
-
 * The Jenkinsfile is intended to be built as a Jenkins Pipeline Job using 'Pipeline script from SCM' and the default settings.
 
-#### Credentials
+### Credentials
 
 * Github
 
@@ -34,9 +32,7 @@ Falcon API credentials will need to be added as two credentials in the Jenkins G
 
 ## Azure Devops Pipeline
 
-### Requirements
-
-#### Variable Group and Secret Variables
+### Variable Group and Secret Variables
 
 This pipeline implies a [variable group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) named `cs_falcon_vars` with the following secret variables.
 
@@ -46,11 +42,11 @@ These variables should be secret variables and Allow access to all pipelines dis
 
 These variables could also be added directly to the pipeline as secret variables in a similar manner however that is not covered in this example.
 
-#### Service Connection
+### Service Connection
 
 This also uses an authenticated docker registry [service connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml) on the project named 'DockerHub'
 
-#### instructions
+### instructions
 
 This example repo should be added as an Azure Devops repo with an existing pipeline using the 'azure-pipeline.yml' file located in the base directory.
 
@@ -67,9 +63,7 @@ This example repo should be added as an Azure Devops repo with an existing pipel
 
 ## Github Actions
 
-### Requirements
-
-#### Secret Variables
+### Secret Variables
 
 * Falcon API
 
@@ -79,7 +73,7 @@ Falcon API credentials will need to be added as two repository secrets with the 
 
 This example uses Docker Login based GitHub action and therefore requires access token based username and password secrets. DockerHub credentials will need to be added to the repository secrets as `DOCKER_USER` and `DOCKER_PASSWORD`.
 
-#### Instructions
+### Instructions
 
 1. Fork the repo
 2. Click on the repo Settings -> Secrets -> New Repository Secret
