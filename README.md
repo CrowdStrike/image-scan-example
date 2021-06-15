@@ -38,7 +38,7 @@ Falcon API credentials will need to be added as two credentials in the Jenkins G
 2. Modify the `<repo_name>` tag and perhaps the `FALCON_CLOUD_REGION` to suite your needs
 3. Log into your Jenkins instance
 4. Browse to `Manage Jenkins` -> `Manage Credentials` -> `(global)`
-5. Add the require credentials listed [above](https://github.com/mccbryan3/image-scan-example/tree/initial_examples#credentials)
+5. Add the required credentials listed [above](https://github.com/mccbryan3/image-scan-example/tree/initial_examples#credentials)
 6. Browse back to the main dashboard
 7. Select `New Item`
 8. Name your new item `Image Scan Pipeline`, select the `Pipeline` option, and select `OK`
