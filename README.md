@@ -32,6 +32,23 @@ This example uses DockerHub as the image registry. DockerHub credentials will ne
 
 Falcon API credentials will need to be added as two credentials in the Jenkins Global Credential Manager as Kind 'secret text' with the IDs `FALCON_CLIENT_ID` and `FALCON_CLIENT_SECRET`. OAuth2 API client and keys can be created at https://falcon.crowdstrike.com/support/api-clients-and-keys.
 
+### Jenkins Instructions
+
+1. Fork the repo
+2. Modify the `<repo_name>` tag and perhaps the `FALCON_CLOUD_REGION` to suite your needs
+3. Log into your Jenkins instance
+4. Browse to 'Manage Jenkins' -> 'Manage Credentials' -> '(global)'
+5. Add the require credentials listed [above](https://github.com/mccbryan3/image-scan-example/tree/initial_examples#credentials)
+6. Browse back to the main dashboard
+7. Select 'New Item'
+8. Name your new item 'Image Scan Pipeline' and select the 'Pipeline' option and OK
+9. Scroll to the 'Pipeline' heading and change the definition drop down to 'Pipeline script from SCM'
+10. Change the SCM option to 'Git'
+11. Paste your forked repo URL into the 'Repository URL' (i.e. https://github.com/mccbryan3/image-scan-example.git)
+12. Select your credentials for github
+13. Select 'Save'
+14. Use the 'Build Now' option to build the pipeline
+
 ## Azure Devops Pipeline
 
 ### Variable Group and Secret Variables
@@ -48,7 +65,7 @@ These variables could also be added directly to the pipeline as secret variables
 
 This also uses an authenticated docker registry [service connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml) on the project named 'DockerHub'
 
-### instructions
+### AzureDevops Instructions
 
 This example repo should be added as an Azure Devops repo with an existing pipeline using the 'azure-pipeline.yml' file located in the base directory.
 
@@ -75,7 +92,7 @@ Falcon API credentials will need to be added as two repository secrets with the 
 
 This example uses Docker Login based GitHub action and therefore requires access token based username and password secrets. DockerHub credentials will need to be added to the repository secrets as `DOCKER_USER` and `DOCKER_PASSWORD`.
 
-### Instructions
+### GitHub Actions Instructions
 
 1. Fork the repo
 2. Click on the repo Settings -> Secrets -> New Repository Secret
