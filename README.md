@@ -74,7 +74,7 @@ This example repo should be added as an Azure Devops repo with an existing pipel
 3. Browse to the `Pipelines` -> `Library` menu and add a variable group named `cs_falcon_vars`.
 4. Add the `FALCON_CLIENT_ID` and `FALCON_CLIENT_SECRET` variables and save
 5. Create a Service Connection on the Project for `Docker Registry` and name it `DockerHub` for the Service Connection Name.
-6. Navigate back to Pipelines -> Pipelines and Create a pipeline
+6. Navigate back to `Pipelines` -> `Pipelines` and Create a pipeline
 7. Use the Azure Repos Git
 8. Choose the image-scan-examples.git repo in your Project
 9. Choose 'Existing Azure Pipeline YAML file and select the file 'azure-pipeline.yml' in the drop down and press continue
