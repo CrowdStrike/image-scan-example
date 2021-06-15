@@ -101,4 +101,4 @@ This example uses Docker Login based GitHub action and therefore requires access
 5. Adjust the `FALCON_CLOUD_REGION` and the `CONTAINER_REPO` variables to fit your needs
 6. Commit the repo changes
 
-NOTE: GitHub Action workflow is set to run only in the 'main' branch.
+NOTE: GitHub Action workflow is set to run only in the `main` branch.
