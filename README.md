@@ -10,7 +10,7 @@ The pipeline examples use the Dockerfile inside this repository for build purpos
 
 The `<repo_name>` tag listed in the pipeline examples file will need to be updated with a repo that is accessible via the docker login credentials outlined in the below example specific instructions.
 
-The `FALCON_CLOUD_REGION` variable may also need to be changed to accommodate your Falcon Platform region.  The current setting is for 'us-2'.
+The `FALCON_CLOUD_REGION` variable may also need to be changed to accommodate your Falcon Platform region.  The current setting is for `us-2`.
 
 These pipeline examples were built to showcase the `docker build` with a subsequent image scan handled by the CrowdStrike Image Scan API.
 
