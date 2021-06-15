@@ -46,7 +46,7 @@ Falcon API credentials will need to be added as two credentials in the Jenkins G
 10. Change the SCM option to `Git`
 11. Paste your forked repo URL into the `Repository URL`
 12. Select your credentials for github
-13. Select 'Save'
+13. Select `Save`
 14. Use the `Build Now` option to build the pipeline
 
 ## Azure Devops Pipeline
