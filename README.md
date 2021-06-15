@@ -43,7 +43,7 @@ Falcon API credentials will need to be added as two credentials in the Jenkins G
 7. Select `New Item`
 8. Name your new item `Image Scan Pipeline`, select the `Pipeline` option, and select `OK`
 9. Scroll to the `Pipeline` heading and change the definition drop down to `Pipeline script from SCM`
-10. Change the SCM option to 'Git'
+10. Change the SCM option to `Git`
 11. Paste your forked repo URL into the `Repository URL`
 12. Select your credentials for github
 13. Select 'Save'
