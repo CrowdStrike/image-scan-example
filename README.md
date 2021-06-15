@@ -6,7 +6,7 @@ All of the CI examples rely on an existing DockerHub repo that you control and h
 
 ## CI Pipeline Examples
 
-The pipeline examplea use the Dockerfile inside this directory for build purposes.
+The pipeline examples use the Dockerfile inside this repository for build purposes.
 
 The `<repo_name>` tag listed in the pipeline examples file will need to be updated with a repo that is accessible via the docker login credentials outlined in the below example specific instructions.
 
