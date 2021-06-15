@@ -77,7 +77,7 @@ This example repo should be added as an Azure Devops repo with an existing pipel
 6. Navigate back to `Pipelines` -> `Pipelines` and Create a pipeline
 7. Use the Azure Repos Git
 8. Choose the `image-scan-examples.git` repo in your Project
-9. Choose 'Existing Azure Pipeline YAML file and select the file 'azure-pipeline.yml' in the drop down and press continue
+9. Choose `Existing Azure Pipeline YAML file` and select the file `azure-pipeline.yml` in the drop down and press continue
 10. Select Run
 
 ## Github Actions
