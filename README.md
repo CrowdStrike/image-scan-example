@@ -76,7 +76,7 @@ This example repo should be added as an Azure Devops repo with an existing pipel
 5. Create a Service Connection on the Project for `Docker Registry` and name it `DockerHub` for the Service Connection Name.
 6. Navigate back to `Pipelines` -> `Pipelines` and Create a pipeline
 7. Use the Azure Repos Git
-8. Choose the image-scan-examples.git repo in your Project
+8. Choose the `image-scan-examples.git` repo in your Project
 9. Choose 'Existing Azure Pipeline YAML file and select the file 'azure-pipeline.yml' in the drop down and press continue
 10. Select Run
 
