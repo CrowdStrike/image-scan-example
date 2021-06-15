@@ -16,7 +16,7 @@ These pipeline examples were built to showcase the `docker build` with a subsequ
 
 ## Jenkins Pipeline
 
-* The Jenkinsfile is intended to be built as a Jenkins Pipeline Job using 'Pipeline script from SCM' and the default settings.
+* The Jenkinsfile is intended to be built as a Jenkins Pipeline Job using `Pipeline script from SCM` and the default settings.
 
 ### Credentials
 
