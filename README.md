@@ -71,7 +71,7 @@ This example repo should be added as an Azure Devops repo with an existing pipel
 
 1. Import this github repo into an existing Azure Devops project.
 2. Edit `azure-pipeline.yml` and adjust the values for `FALCON_CLOUD_REGION` and `CONTAINER_REPO` to fit your needs.
-3. Browse to the `Pipelines -> Library` menu and add a variable group named `cs_falcon_vars`.
+3. Browse to the `Pipelines` -> `Library` menu and add a variable group named `cs_falcon_vars`.
 4. Add the `FALCON_CLIENT_ID` and `FALCON_CLIENT_SECRET` variables and save
 5. Create a Service Connection on the Project for `Docker Registry` and name it `DockerHub` for the Service Connection Name.
 6. Navigate back to Pipelines -> Pipelines and Create a pipeline
