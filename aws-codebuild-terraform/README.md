@@ -12,7 +12,7 @@ This repo can be cloned locally and ran with an authenticated AWS CLI
 * S3 Bucket for logging
 * IAM Service Role for CodeBuild
 * AWS Secrets Manager Secrets
-* Permissions assignment to CodeBuild Service Role to access ECR, S3 and Secrets that were created
+* Permissions assignment to CodeBuild Service Role to access ECR, S3, and Secrets that were created
 * IAM assignment for current user access CodeCommit
 
 ## Requirements
@@ -48,4 +48,3 @@ SCORE_THRESHOLD="99999999"
 ## Known limitations
 
 * This is an early version. Please report or fix and issues.
-
