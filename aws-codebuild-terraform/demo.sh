@@ -25,7 +25,9 @@ demo_up() {
     git config --global credential.UseHttpPath true
 
     # Setup initial repo
-    git remote remove origin
+    if [[ $(git remote -v | grep origin) ]]; then
+        git remote remove origin
+    fi
     if [[ ! $(git remote -v | awk  '{print $1}' | grep codecommit) ]]; then
         git remote add codecommit codecommit::$AWS_REGION://cs-image-code
     fi
