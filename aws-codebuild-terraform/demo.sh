@@ -25,8 +25,9 @@ demo_up() {
     git config --global credential.UseHttpPath true
 
     # Setup initial repo
+    git remote remove origin
     if [[ ! $(git remote -v | awk  '{print $1}' | grep codecommit) ]]; then
-        git remote add codecommit codecommit::us-east-2://cs-image-code
+        git remote add codecommit codecommit::$AWS_REGION://cs-image-code
     fi
     files=(../buildspec.yml ../Dockerfile ../scripts/gen_hostname.sh)
     for file in ${files[@]}
@@ -38,7 +39,8 @@ demo_up() {
     git commit -m "initial commit"
 
     # Push repo
-    git push --set-upstream codecommit main
+    CURRENT_BRANCH=$(git branch | grep '\*' | sed 's/\* //g')
+    git push --set-upstream codecommit $CURRENT_BRANCH:main
 
     # Run codebuild
     aws codebuild start-build --project-name cs-image-build
