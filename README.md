@@ -102,3 +102,7 @@ This example uses Docker Login based GitHub action and therefore requires access
 6. Commit the repo changes
 
 NOTE: GitHub Action workflow is set to run only in the `main` branch.
+
+## AWS CodeCommit and CodeBuild
+
+All information for this example is located in the [aws-codebuild-terraform](aws-codebuild-terraform) and CodeBuild is ran using the `buildspec.yml`
