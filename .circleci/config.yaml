@@ -1,0 +1,53 @@
+version: 2.1
+
+jobs:
+  build_image:
+    environment:
+      # Replace the <tags> below with your values.
+      #FALCON_CLIENT_SECRET = Should be put in a dedicated context (cf end of this file)
+      #FALCON_CLIENT_ID = Should be put in a dedicated context (cf end of this file)
+      #FALCON_CLOUD_REGION = Should be put in a dedicated context (cf end of this file)
+      FALCON_IMAGE_ASSESSMENT_BASE_SCORE = 500
+      BUILD_DIR = '.'
+      CONTAINER_REPO = '<repo_name>'
+      CONTAINER_TAG = "${CIRCLE_BUILD_NUM}"
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: "20.10.11"
+          docker_layer_caching: true
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t $CONTAINER_REPO:$CONTAINER_TAG $BUILD_DIR
+
+      - run:
+          name: CrowdStrike Image Assessment
+          command: |
+            if [ ! -d container-image-scan ] ; then
+              git clone https://github.com/CrowdStrike/container-image-scan.git
+            fi
+
+            #we expect to have python docker package if not uncomment those lines
+            #sudo apt-get update && sudo apt-get install -y python3 python3-pip
+            #pip3 install docker
+
+            # launch the image scan
+            python3 container-image-scan/cs_scanimage.py \
+                    -c ${FALCON_CLOUD_REGION} --clientid ${FALCON_CLIENT_ID} \
+                    --repo $CONTAINER_REPO --tag $CONTAINER_TAG -s ${FALCON_IMAGE_ASSESSMENT_BASE_SCORE}
+
+      - run:
+          name: Push application Docker image to registry
+          command: |
+            echo ${REGISTRY_ACCESS_TOKEN} | docker login -u ${REGISTRY_LOGIN} --password-stdin ${REGISTRY_HOST}
+            docker tag $CONTAINER_REPO:$CONTAINER_TAG "${REGISTRY_HOST}/PATH/${CONTAINER_REPO}:${CONTAINER_TAG}"
+            docker push "${REGISTRY_HOST}/PATH/${CONTAINER_REPO}:${CONTAINER_TAG}"
+          # don't forget to update the registry path
+
+workflows:
+  build_app_and_image:
+    jobs:
+      - build_image:
+          context:
+            - CrowdStrike-Context # Create a context that contains CrowdStrike API Creds
