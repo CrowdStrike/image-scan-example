@@ -27,7 +27,7 @@ pipeline {
                 if [ ! -d container-image-scan ] ; then
                     git clone https://github.com/crowdstrike/container-image-scan
                 fi
-                pip3 install docker-py
+                pip3 install docker
                 python3 container-image-scan/cs_scanimage.py
                 '''
             }
