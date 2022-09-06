@@ -32,7 +32,7 @@ steps:
 - script: |
     export FALCON_CLIENT_SECRET=$(FALCON_CLIENT_SECRET)
     export FALCON_CLIENT_ID=$(FALCON_CLIENT_ID)
-    pip3 install docker-py
+    pip3 install docker-py crowdstrike-falconpy
     if [ ! -d container-image-scan ] ; then
       git clone https://github.com/crowdstrike/container-image-scan
     fi
