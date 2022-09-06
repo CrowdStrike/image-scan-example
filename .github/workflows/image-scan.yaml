@@ -37,7 +37,7 @@ jobs:
         tags: "${{ env.CONTAINER_REPO }}:${{ env.CONTAINER_TAG }}"
     
     - name: Scan Container Image from Repository
-      uses: CrowdStrike/container-image-scan-actionv0.7
+      uses: CrowdStrike/container-image-scan-action@v0.7
       id: image-scan
       with:
          container_repository: "${{ env.CONTAINER_REPOSITORY }}"
