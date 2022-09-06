@@ -30,8 +30,8 @@ jobs:
 
             #we expect to have python docker package if not uncomment those lines
             #sudo apt-get update && sudo apt-get install -y python3 python3-pip
-            #pip3 install docker
-
+            #pip3 install docker crowdstrike-falconpy
+            pip3 install crowdstrike-falconpy
             # launch the image scan
             python3 container-image-scan/cs_scanimage.py \
                     -c ${FALCON_CLOUD_REGION} --clientid ${FALCON_CLIENT_ID} \
