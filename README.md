@@ -53,9 +53,11 @@ Falcon API credentials will need to be added as two credentials in the Jenkins G
 
 ### Variable Group and Secret Variables
 
-This pipeline implies a [variable group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) named `cs_falcon_vars` with the following secret variables.
+This pipeline implies a [variable group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml) named `cs-falcon-variables` with the following secret variables.
 
-`FALCON_CLIENT_SECRET` and `FALCON_CLIENT_ID`
+- `FALCON_CLIENT_SECRET`
+- `FALCON_CLIENT_ID`
+- `FALCON_CLOUD_REGION`
 
 These variables should be secret variables and Allow access to all pipelines disabled.
 
