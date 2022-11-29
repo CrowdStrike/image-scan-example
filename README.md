@@ -65,14 +65,14 @@ These variables could also be added directly to the pipeline as secret variables
 
 This also uses an authenticated docker registry [service connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml) on the project named 'DockerHub'
 
-### AzureDevops Instructions
+### Azure DevOps Instructions
 
 This example repo should be added as an Azure Devops repo with an existing pipeline using the 'azure-pipeline.yml' file located in the base directory.
 
 1. Import this github repo into an existing Azure Devops project.
-2. Edit `azure-pipeline.yml` and adjust the values for `FALCON_CLOUD_REGION` and `CONTAINER_REPO` to fit your needs.
-3. Browse to the `Pipelines` -> `Library` menu and add a variable group named `cs_falcon_vars`.
-4. Add the `FALCON_CLIENT_ID` and `FALCON_CLIENT_SECRET` variables and save
+2. Edit `azure-pipeline.yml` and adjust the values for `CONTAINER_REPOSITORY` and `IMAGE_TAG` to fit your needs.
+3. Browse to the `Pipelines` -> `Library` menu and add a variable group named `cs-falcon-variables`.
+4. Add `FALCON_CLIENT_ID`, `FALCON_CLIENT_SECRET` and `FALCON_CLOUD_REGION` variables and save
 5. Create a Service Connection on the Project for `Docker Registry` and name it `DockerHub` for the Service Connection Name.
 6. Navigate back to `Pipelines` -> `Pipelines` and Create a pipeline
 7. Use the Azure Repos Git
