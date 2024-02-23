@@ -96,7 +96,7 @@ This example uses Docker Login based GitHub action and therefore requires access
 
 1. Fork the repo
 2. Click on the repo `Settings` -> `Secrets` -> `New Repository Secret`
-3. Add Secrets for `FALCON_CLIENT_ID`, `FACLON_CLIENT_SECRET`, `DOCKER_USER` and `DOCKER_PASSWORD`
+3. Add Secrets for `FALCON_CLIENT_ID`, `FALCON_CLIENT_SECRET`, `DOCKER_USER` and `DOCKER_PASSWORD`
 4. Navigate back to `<> Code` -> `.github/workflows` and edit `image-scan.yaml`
 5. Adjust the `FALCON_CLOUD_REGION` and the `CONTAINER_REPO` variables to fit your needs
 6. Commit the repo changes
