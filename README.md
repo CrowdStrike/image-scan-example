@@ -1,3 +1,6 @@
+> [!WARNING]
+> **DEPRECATED**: This repository is deprecated and no longer maintained. Please migrate to the official CrowdStrike container scanning action: [CrowdStrike/fcs-action](https://github.com/CrowdStrike/fcs-action)
+
 # Image-Scan-Example
 
 #### PREREQUISITES: 
